@@ -16,7 +16,11 @@ class TestPub(unittest.TestCase):
 
     
     def test_drink(self):
-        self.assertEqual(["Jabba Juice", "Spotchka", "Blackroot"], self.pub.drinks)
+        self.assertEqual({
+            'name': "Jabba Juice", "units": 5, "price": 3,
+            'name': "Spotchka", "units": 10, "price": 5,
+            'name': "Blackroot", "units": 3, "price": 2
+        }, self.pub.drinks)
     
     
     def test_increase_till(self):
